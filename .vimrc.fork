@@ -27,4 +27,6 @@ endif
 set number
 set shell=/bin/sh"
 
+:nmap <C-b> :EasyBuffer<CR>
+
 colorscheme coding_goodness
