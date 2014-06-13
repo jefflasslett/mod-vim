@@ -42,13 +42,13 @@ The easiest way to install spf13-vim is to use our [automatic installer](https:/
 
 ```bash
 
-    curl https://github.com/jefflasslett/spf13-vim/blob/3.0/bootstrap.sh -L > spf13-vim.sh && sh spf13-vim.sh
+    curl https://raw.githubusercontent.com/jefflasslett/spf13-vim/3.0/bootstrap.sh -L > spf13-vim.sh && sh spf13-vim.sh
 ```
 
 If you have a bash-compatible shell you can run the script directly:
 ```bash
 
-    sh <(curl https://github.com/jefflasslett/spf13-vim/blob/3.0/bootstrap.sh -L)
+    sh <(curl https://raw.githubusercontent.com/jefflasslett/spf13-vim/3.0/bootstrap.sh -L)
 ```
 
 ## Installing on Windows
