@@ -92,16 +92,7 @@
     " Require a special keypress to enter multiple cursors mode
     "   let g:multi_cursor_start_key='+'
 
-    let g:spf13_bundle_groups  = [ 'general'
-                                 , 'writing'
-                                 , 'neocomplcache'
-                                 , 'programming'
-                                 , 'ruby'
-                                 , 'javascript'
-                                 , 'html'
-                                 , 'haskell'
-                                 , 'misc'
-                                 ]
+    let g:spf13_bundle_groups  = [ 'general', 'writing', 'neocomplcache', 'programming', 'ruby', 'javascript', 'html', 'haskell', 'misc' ]
 
     let g:override_spf13_bundles = 1
 " }
