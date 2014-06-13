@@ -39,7 +39,6 @@
             Bundle 'vim-scripts/sessionman.vim'
             Bundle 'matchit.zip'
             Bundle 'bling/vim-airline'
-            Bundle 'bling/vim-bufferline'
             Bundle 'godlygeek/csapprox'
             Bundle 'jistr/vim-nerdtree-tabs'
             Bundle 'jefflasslett/coding_goodness'
