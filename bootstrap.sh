@@ -1,4 +1,19 @@
 #!/usr/bin/env bash
+
+#   Copyright 2014 Steve Francia
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+
 ############################  SETUP PARAMETERS
 app_name='spf13-vim'
 app_dir="$HOME/.spf13-vim-3"
@@ -37,6 +52,12 @@ program_exists() {
     # throw error on non-zero return value
     if [ ! "$ret" -eq '0' ]; then
     error "$2"
+    fi
+}
+
+variable_set() {
+    if [ -z "$1" ]; then
+        error "You must have your HOME environmental variable set to continue."
     fi
 }
 
@@ -157,6 +178,7 @@ setup_vundle() {
 }
 
 ############################ MAIN()
+variable_set "$HOME"
 program_exists "vim" "To install $app_name you first need to install Vim."
 
 do_backup   "Your old vim stuff has a suffix now and looks like .vim.`date +%Y%m%d%S`" \
