@@ -24,7 +24,7 @@
     " In your .vimrc.before.local file
     " list only the plugin groups you will use
     if !exists('g:spf13_bundle_groups')
-        let g:spf13_bundle_groups=['general', 'writing', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'twig', 'javascript', 'html', 'misc',]
+        let g:spf13_bundle_groups=['general', 'writing', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'twig', 'javascript', 'html', 'elm', 'misc',]
     endif
 
     " To override all the included bundles, add the following to your
@@ -128,6 +128,12 @@
             Bundle 'hail2u/vim-css3-syntax'
             Bundle 'gorodinskiy/vim-coloresque'
             Bundle 'mattn/emmet-vim'
+        endif
+    " }
+    "
+    " Elm {
+        if count(g:spf13_bundle_groups, 'elm')
+            Bundle 'lambdatoast/elm'
         endif
     " }
 
