@@ -133,7 +133,7 @@
     "
     " Elm {
         if count(g:spf13_bundle_groups, 'elm')
-            Bundle 'lambdatoast/elm'
+            Bundle 'lambdatoast/elm.vim'
         endif
     " }
 
