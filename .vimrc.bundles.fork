@@ -24,7 +24,7 @@
     " In your .vimrc.before.local file
     " list only the plugin groups you will use
     if !exists('g:spf13_bundle_groups')
-        let g:spf13_bundle_groups=['general', 'writing', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'twig', 'javascript', 'html', 'elm', 'misc',]
+        let g:spf13_bundle_groups=['general', 'writing', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'twig', 'javascript', 'html', 'elm', 'misc', 'writing' ]
     endif
 
     " To override all the included bundles, add the following to your
@@ -53,6 +53,7 @@
             Bundle 'kana/vim-textobj-user'
             Bundle 'kana/vim-textobj-indent'
             Bundle 'troydm/easybuffer.vim'
+           
         endif
     " }
 
@@ -154,4 +155,12 @@
         endif
     " }
 
+    " Writing {
+        if count(g:spf13_bundle_groups, 'writing')
+            Bundle 'reedes/vim-litecorrect'
+            Bundle 'reedes/vim-textobj-sentence'
+            Bundle 'reedes/vim-textobj-quote'
+            Bundle 'reedes/vim-wordy'
+        endif
+    " }
 
