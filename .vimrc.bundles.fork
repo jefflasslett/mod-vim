@@ -152,6 +152,7 @@
             Bundle 'tpope/vim-markdown'
             Bundle 'spf13/vim-preview'
             Bundle 'tpope/vim-cucumber'
+            Bundle 'ryanss/vim-hackernews'
         endif
     " }
 
