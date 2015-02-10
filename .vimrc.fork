@@ -30,3 +30,9 @@ set shell=/bin/sh"
 :nmap <C-b> :EasyBuffer<CR>
 
 colorscheme coding_goodness
+
+if (exists('+colorcolumn'))
+  set colorcolumn=80
+  highlight ColorColumn guibg=#101010 ctermbg=234
+endif
+
