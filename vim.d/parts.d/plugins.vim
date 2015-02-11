@@ -19,6 +19,27 @@ com! -nargs=+  UnBundle call UnBundle(<args>)
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jefflasslett/coding_goodness'
 Plugin 'scrooloose/nerdtree'
+Plugin 'troydm/easybuffer.vim'
+
+Plugin 'Shougo/vimproc'
+
+" ================ Haskell ================== {
+"
+" ---------- VERY IMPORTANT -----------
+" Don't forget to install ghc-mod with:
+" cabal install ghc-mod
+" -------------------------------------
+
+Plugin 'scrooloose/syntastic'             " syntax checker
+" --- Haskell
+Plugin 'yogsototh/haskell-vim'            " syntax indentation / highlight
+Plugin 'enomsg/vim-haskellConcealPlus'    " unicode for haskell operators
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+Plugin 'Twinside/vim-hoogle'
+Plugin 'pbrisbin/html-template-syntax'    " Yesod templates
+
+" }
 
 
 call vundle#end()
