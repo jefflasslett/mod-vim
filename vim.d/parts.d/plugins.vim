@@ -18,6 +18,7 @@ com! -nargs=+  UnBundle call UnBundle(<args>)
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jefflasslett/coding_goodness'
+Plugin 'scrooloose/nerdtree'
 
 
 call vundle#end()
