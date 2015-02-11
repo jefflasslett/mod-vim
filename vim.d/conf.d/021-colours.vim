@@ -1,1 +1,0 @@
-../parts.d/colours.vim

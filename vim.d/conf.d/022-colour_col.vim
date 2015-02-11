@@ -1,1 +1,0 @@
-../parts.d/colour_col.vim

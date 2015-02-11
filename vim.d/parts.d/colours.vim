@@ -1,3 +1,0 @@
-
-colorscheme coding_goodness
-
