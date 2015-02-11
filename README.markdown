@@ -1,4 +1,3 @@
-# mod-vim : Jeff Lasslett's modular vim config
                              _
                             | |             
          _ __ ___   __   __ | |     __   __(_)_ __ ___
@@ -6,6 +5,10 @@
         | | | | | | () | ()   |_____|\ V / | | | | | | |
         |_| |_| |_|\__/ \__'|_|       \_/  |_|_| |_| |_|
                
+
+# mod-vim : a modular vim config
+
+**NOTE: Remodelling in progress.  This config won't auto install. Lot's of features don't work.  I wouldn't recommend it to you (yet).**
 
 I'm not as ambitious as the author of SPF-13.  This is my personal vim config.
 It works well for me on my macs and linux, but I've stripped out the windows
