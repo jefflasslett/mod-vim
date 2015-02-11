@@ -15,12 +15,11 @@
 #   limitations under the License.
 
 ############################  SETUP PARAMETERS
-app_name='spf13-vim'
-app_dir="$HOME/.spf13-vim-3"
-[ -z "$git_uri" ] && git_uri='https://github.com/jefflasslett/spf13-vim.git'
-git_branch='3.0'
+app_name='mod-vim'
+app_dir="$HOME/prj/mod-vim"
+[ -z "$git_uri" ] && git_uri='https://github.com/jefflasslett/mod-vim.git'
+git_branch='precious'
 debug_mode='0'
-fork_maintainer='1'
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
 
 ############################  BASIC SETUP TOOLS
@@ -91,7 +90,7 @@ upgrade_repo() {
       fi
 
       if [ "$1" = "vundle" ]; then
-          cd "$HOME/.vim/bundle/vundle" &&
+          cd "$HOME/.vim.d/plugin.d/vundle" &&
           git pull origin master
       fi
 
@@ -167,8 +166,8 @@ setup_vundle() {
     vim \
         -u "$app_dir/.vimrc.bundles.default" \
         "+set nomore" \
-        "+BundleInstall!" \
-        "+BundleClean" \
+        "+PluginInstall!" \
+        "+PluginClean" \
         "+qall"
     
     export SHELL="$system_shell"
@@ -195,4 +194,3 @@ clone_vundle    "Successfully cloned vundle"
 setup_vundle    "Now updating/installing plugins using Vundle"
 
 msg             "\nThanks for installing $app_name."
-msg             "© `date +%Y` http://vim.spf13.com/"
