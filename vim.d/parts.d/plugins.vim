@@ -35,6 +35,8 @@ Plugin 'pbrisbin/html-template-syntax'    " Yesod templates
 
 Plugin 'guns/xterm-color-table.vim'
 
+Plugin 'bling/vim-airline'
+
 
 
 call vundle#end()
