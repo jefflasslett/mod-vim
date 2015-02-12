@@ -4,5 +4,5 @@
 "
 
 " Tell unite to use the 'fuzzy' ctrl-p style matcher
-call unite#filter#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
