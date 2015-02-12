@@ -42,6 +42,9 @@ if has('statusline')
     set statusline+=\ [%{&ff}/%Y]            " Filetype
     set statusline+=\ [%{getcwd()}]          " Current dir
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+
+    " show tabs for open buffers when only one tab open
+    let g:airline#extensions#tabline#enabled = 1
 endif
 
 set backspace=indent,eol,start  " Backspace for dummies
