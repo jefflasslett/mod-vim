@@ -3,10 +3,6 @@ if isdirectory(expand("~/.vim/bundle/nerdtree"))
 endif
 
 if isdirectory(expand("~/.vim/bundle/nerdtree"))
-  map <C-e> :NERDTreeToggle<CR>
-  map <leader>e :NERDTreeFind<CR>
-  nmap <leader>nt :NERDTreeFind<CR>
-
   let NERDTreeShowBookmarks=1
   let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
   let NERDTreeChDirMode=0
