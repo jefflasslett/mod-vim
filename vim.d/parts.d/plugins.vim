@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jefflasslett/coding_goodness'
 Plugin 'scrooloose/nerdtree'
-Plugin 'troydm/easybuffer.vim'
 
 Plugin 'Shougo/vimproc'
 
