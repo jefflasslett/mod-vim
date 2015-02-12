@@ -38,7 +38,7 @@
 " Create variables to hold the names of important directories in this
 " modular config tree:
 "
-" $HOME (aka ~) 
+" $HOME (aka ~)
 " |
 " +-- .vimrc          <- this file. It all starts here
 " |
