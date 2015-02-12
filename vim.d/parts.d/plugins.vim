@@ -13,6 +13,7 @@ Plugin 'jefflasslett/coding_goodness'
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'Shougo/vimproc'
+Plugin 'tpope/vim-fugitive'
 
 " ================ Haskell ================== {
 "
