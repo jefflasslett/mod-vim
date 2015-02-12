@@ -5,5 +5,6 @@ if isdirectory(expand("~/.vim/bundle/nerdtree"))
   nmap <leader>nt :NERDTreeFind<CR>
 endif
 
-:nmap <C-b> :Unite -quick-match buffer<CR>
+:nnoremap <C-b> :Unite -quick-match buffer<CR>
+:nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
 
