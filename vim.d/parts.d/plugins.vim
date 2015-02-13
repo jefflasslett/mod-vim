@@ -39,6 +39,9 @@ Plugin 'guns/xterm-color-table.vim'
 
 Plugin 'bling/vim-airline'
 
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 
 
 call vundle#end()
