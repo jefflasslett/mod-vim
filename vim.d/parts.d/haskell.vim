@@ -6,7 +6,7 @@
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s %s"
 
-let hscoptions='tBQZ'
+" let hscoptions="EMtBQZ"
 
 let mapleader=","
 let g:mapleader=","

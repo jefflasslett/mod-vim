@@ -26,12 +26,20 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'scrooloose/syntastic'             " syntax checker
 " --- Haskell
-Plugin 'yogsototh/haskell-vim'            " syntax indentation / highlight
-Plugin 'enomsg/vim-haskellConcealPlus'    " unicode for haskell operators
+" Plugin 'enomsg/vim-haskellConcealPlus'    " unicode for haskell operators
+Plugin 'Twinside/vim-haskellConceal'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'pbrisbin/html-template-syntax'    " Yesod templates
+
+" Plugin 'Twinside/vim-haskellFold'
+ 
+Plugin 'travitch/hasksyn'
+" Plugin 'dag/vim2hs'
+" Plugin 'bitc/vim-hdevtools'
+" Plugin 'adinapoli/cumino'
+" Plugin 'lukerandall/haskellmode-vim'
 
 " }
 
