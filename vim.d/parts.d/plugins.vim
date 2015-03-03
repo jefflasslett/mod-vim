@@ -34,8 +34,8 @@ Plugin 'Twinside/vim-hoogle'
 Plugin 'pbrisbin/html-template-syntax'    " Yesod templates
 
 " Plugin 'Twinside/vim-haskellFold'
- 
-Plugin 'travitch/hasksyn'
+
+" Plugin 'travitch/hasksyn'
 " Plugin 'dag/vim2hs'
 " Plugin 'bitc/vim-hdevtools'
 " Plugin 'adinapoli/cumino'
