@@ -17,6 +17,8 @@ Plugin 'Shougo/unite.vim'
 
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'rking/ag.vim'
+
 " ================ Haskell ================== {
 "
 " ---------- VERY IMPORTANT -----------
