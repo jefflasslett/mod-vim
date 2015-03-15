@@ -53,6 +53,8 @@ Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 
+Plugin 'mattn/emmet-vim'
+
 
 call vundle#end()
 
