@@ -12,18 +12,21 @@
 
 # mod-vim : a modular vim config
 
-**NOTE: Remodelling in progress.  This config won't auto install. Lot's of features don't work.  I wouldn't recommend it to you (yet).**
-
 I'm not as ambitious as the author of SPF-13.  This is my personal vim config.
 It works well for me on my macs and linux, but I've stripped out the windows
 support (at least for now).  mod-vim achieves the same ends as spf-13 in that
-it installs a set of useful plugins and provide some organisational philosophy 
+it installs a set of useful plugins and provides some organisational philosophy 
 to the configuration.
 
-Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, mod-vim uses the [Vundle] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
 
 # Installation
 
+Nothing fancy as yet.  Simply clone this project somewhere convenient and
+create symlinks:
+
+1. `ln -s ~/.vimrc path/to.mod-vim/vimrc`
+1. `ln -s ~/.vim.d path/to.mod-vim/vim.d`
+1. `vim +PluginInstall! +PluginClean +qall`
 
 # Design
 
@@ -78,17 +81,48 @@ To be explained.
 
 # Plugins
 
-mod-vim contains a curated set of popular vim plugins, colors, snippets and syntaxes. Great care has been made to ensure that these plugins play well together and have optimal configuration.
+SPF-13 installs a fairly massive number of plugins, and the functionality of
+some seem to overlap.  I found that you really need to study each plugin and its
+keybindings to really get the best out of it (surprise).
 
-## Adding new plugins
+It dawned on me that it would probably be best to build my own config and install
+only the plugins that I use.  Secondly, I would only install one plugin at a
+time, set its key bindings, and learn how to make effective use of it.
 
-Once new plugins are added, they have to be installed.
+With that in mind here's what is installed:
 
+  * 'gmarik/Vundle.vim'              the plugin manager
+  * 'jefflasslett/coding_goodness'   my own syntax highlighting
+  * 'scrooloose/nerdtree'            project tree view
+  * 'Shougo/vimproc'                 prerequisite for Shuogo's other plugins
+  * 'Shougo/unite.vim'               universal finder and lister of files/buffers
+  * 'tpope/vim-fugitive'             git wrapper
+  * 'rking/ag.vim'                   regexp file search
+  * 'scrooloose/syntastic'           syntax checker
+  * 'Twinside/vim-haskellConceal     replaces peices of haskell syntax with unicode chars
+  * 'eagletmt/ghcmod-vim'            calls ghc on modules of haskell code.  Provides fantastic guidance.
+  * 'eagletmt/neco-ghc'
+  * 'Twinside/vim-hoogle'            Haskell library search
+  * 'pbrisbin/html-template-syntax'  Yesod templates
+  * 'bling/vim-airline'              Enhanced status line
+  * 'Shougo/neocomplete'             autocomplete
+  * 'Shougo/neosnippet'              snippets.  Code fragments
+  * 'Shougo/neosnippet-snippets'
+  * 'mattn/emmet-vim'                HTML editing 
+
+
+
+## Adding and removing new plugins
+
+Just edit the list in `vim.d/parts.d/plugins.vim` and run:
 ```bash
     vim +PluginInstall! +PluginClean +q
 ```
 
-## Removing (disabling) an included plugin
+There may also be custom key bindings to alter and other fragments of config
+to edit.  
+
+** More to come. **
 
 * Keyboard [cheat sheet](https://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png).
 
