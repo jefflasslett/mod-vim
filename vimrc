@@ -42,20 +42,17 @@
 " |
 " +-- .vimrc          <- this file. It all starts here
 " |
-" +-- .vim.d          <- The root of our vim config
+" +-- .vim            <- default install location for vundle plugins
 " |   |
-" |   +-- plugins.d   <- Plugins to be installed below here
+" |   +-- bundle      <- vim plugins installed below this dir
+" |
+" +-- .vim.d          <- The root of our vim config
 " |   |
 " |   +-- conf.d      <- contains symlinks to 'parts'.  These parts form the
 " |   |                  active configuration.
 " |   |
 " |   +-- parts.d     <- 'parts' fragments of vim config to be sourced by
 " |   |   |              .vimrc
-" |   |   |
-" |   |   +-- <*>.group  <- .group file contains plugin groups: collections of
-" |   |   |                 related plugins i.e. for a programming lang.
-" |   |   |
-" |   |   +-- plugins    <- special 'part' contains plugin system (vundle) init
 " |   |   |
 " |   |   +-- <*>        <- other vim config fragments to be included
 " |   |
