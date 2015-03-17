@@ -12,11 +12,10 @@
 
 # mod-vim : a modular vim config
 
-I'm not as ambitious as the author of SPF-13.  This is my personal vim config.
-It works well for me on my macs and linux, but I've stripped out the windows
-support (at least for now).  mod-vim achieves the same ends as spf-13 in that
-it installs a set of useful plugins and provides some organisational philosophy 
-to the configuration.
+This is my vim config. It works well for me on my macs and linux, but I've
+stripped out the windows support (at least for now).  mod-vim achieves the same
+ends as spf-13 in that it installs a set of useful plugins and provides some
+organisational philosophy to the configuration.
 
 
 # Installation
@@ -122,7 +121,7 @@ Just edit the list in `vim.d/parts.d/plugins.vim` and run:
 There may also be custom key bindings to alter and other fragments of config
 to edit.  
 
-** More to come. **
+**More to come.**
 
 * Keyboard [cheat sheet](https://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png).
 
