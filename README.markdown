@@ -8,7 +8,7 @@
      o888o o888o o888o `Y8bod8P' `Y8bod88P"             `8'     o888o o888o o888o o888o 
                                                                                    
                                                                                    
-               
+
 
 # mod-vim : a modular vim config
 
@@ -23,8 +23,8 @@ organisational philosophy to the configuration.
 Nothing fancy as yet.  Simply clone this project somewhere convenient and
 create symlinks:
 
-1. `ln -s ~/.vimrc path/to.mod-vim/vimrc`
-1. `ln -s ~/.vim.d path/to.mod-vim/vim.d`
+1. `ln -s ~/.vimrc path/to/mod-vim/vimrc`
+1. `ln -s ~/.vim.d path/to/mod-vim/vim.d`
 1. `vim +PluginInstall! +PluginClean +qall`
 
 # Design
@@ -90,24 +90,44 @@ time, set its key bindings, and learn how to make effective use of it.
 
 With that in mind here's what is installed:
 
-  * 'gmarik/Vundle.vim'              the plugin manager
-  * 'jefflasslett/coding_goodness'   my own syntax highlighting
-  * 'scrooloose/nerdtree'            project tree view
-  * 'Shougo/vimproc'                 prerequisite for Shuogo's other plugins
-  * 'Shougo/unite.vim'               universal finder and lister of files/buffers
-  * 'tpope/vim-fugitive'             git wrapper
-  * 'rking/ag.vim'                   regexp file search
-  * 'scrooloose/syntastic'           syntax checker
-  * 'Twinside/vim-haskellConceal     replaces peices of haskell syntax with unicode chars
-  * 'eagletmt/ghcmod-vim'            calls ghc on modules of haskell code.  Provides fantastic guidance.
-  * 'eagletmt/neco-ghc'
-  * 'Twinside/vim-hoogle'            Haskell library search
-  * 'pbrisbin/html-template-syntax'  Yesod templates
-  * 'bling/vim-airline'              Enhanced status line
-  * 'Shougo/neocomplete'             autocomplete
-  * 'Shougo/neosnippet'              snippets.  Code fragments
-  * 'Shougo/neosnippet-snippets'
-  * 'mattn/emmet-vim'                HTML editing 
+<dl>
+  <dt>'gmarik/Vundle.vim'</dt>
+  <dd>the plugin manager</dd>
+  <dt>'jefflasslett/coding_goodness'</dt>
+  <dd>my own syntax highlighting<dd>
+  <dt>'scrooloose/nerdtree'</dt>
+  <dd>project tree view<dd>
+  <dt>'Shougo/vimproc'</dt>
+  <dd>prerequisite for Shuogo's other plugins<dd>
+  <dt>'Shougo/unite.vim'</dt>
+  <dd>universal finder and lister of files/buffers<dd>
+  <dt>'tpope/vim-fugitive'</dt>
+  <dd>git wrapper<dd>
+  <dt>'rking/ag.vim'</dt>
+  <dd>regexp file search<dd>
+  <dt>'scrooloose/syntastic'</dt>
+  <dd>syntax checker<dd>
+  <dt>'Twinside/vim-haskellConceal</dt>
+  <dd>replaces peices of haskell syntax with unicode chars<dd>
+  <dt>'eagletmt/ghcmod-vim'</dt>
+  <dd>calls ghc on modules of haskell code.  Provides fantastic guidance.<dd>
+  <dt>'eagletmt/neco-ghc'<dt>
+  <dd></dd>
+  <dt>'Twinside/vim-hoogle'</dt>
+  <dd>Haskell library search<dd>
+  <dt>'pbrisbin/html-template-syntax'</dt>
+  <dd>Yesod templates<dd>
+  <dt>'bling/vim-airline'</dt>
+  <dd>Enhanced status line<dd>
+  <dt>'Shougo/neocomplete'</dt>
+  <dd>autocomplete<dd>
+  <dt>'Shougo/neosnippet'</dt>
+  <dd>snippets.  Code fragments<dd>
+  <dt>'Shougo/neosnippet-snippets'</dt>
+  <dd></dd>
+  <dt>'mattn/emmet-vim'</dt>
+  <dd>HTML editing <dd>
+</dl>
 
 
 
