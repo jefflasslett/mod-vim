@@ -112,7 +112,7 @@ With that in mind here's what is installed:
   <dt>'eagletmt/ghcmod-vim'</dt>
   <dd>calls ghc on modules of haskell code.  Provides fantastic guidance.<dd>
   <dt>'eagletmt/neco-ghc'<dt>
-  <dd></dd>
+  <dd>Autocompletion for Haskell code</dd>
   <dt>'Twinside/vim-hoogle'</dt>
   <dd>Haskell library search<dd>
   <dt>'pbrisbin/html-template-syntax'</dt>
@@ -124,9 +124,11 @@ With that in mind here's what is installed:
   <dt>'Shougo/neosnippet'</dt>
   <dd>snippets.  Code fragments<dd>
   <dt>'Shougo/neosnippet-snippets'</dt>
-  <dd></dd>
+  <dd>Some actual snippets for neosnippets to use</dd>
   <dt>'mattn/emmet-vim'</dt>
   <dd>HTML editing <dd>
+  <dt>'groenewege/vim-less'</dt>
+  <dd>Syntax highlighting of Less CSS preprocessor syntax</dd>
 </dl>
 
 
