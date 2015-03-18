@@ -45,8 +45,6 @@ Plugin 'pbrisbin/html-template-syntax'    " Yesod templates
 
 " }
 
-Plugin 'guns/xterm-color-table.vim'
-
 Plugin 'bling/vim-airline'
 
 Plugin 'Shougo/neocomplete'
@@ -54,7 +52,7 @@ Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 
 Plugin 'mattn/emmet-vim'
-
+Plugin 'groenewege/vim-less'
 
 call vundle#end()
 
