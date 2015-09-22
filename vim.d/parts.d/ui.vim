@@ -7,7 +7,7 @@ set guioptions-=L  "remove left-hand scroll bar
 
 if LINUX()
   " Do Linux-specific stuff.
-  set guifont=DejaVu\ Sans\ Mono\ 12
+  set guifont=Inconsolata\ 14
 elseif OSX()
   set guifont=Menlo:h16
 endif
