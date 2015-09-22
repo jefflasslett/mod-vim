@@ -12,7 +12,14 @@
 
 # mod-vim : a modular vim config
 
-This is my vim config. It works well for me on my macs and linux, but I've
+This is my vim config. It started out as spf-13 (Steve Francia's) vimrc.  But
+things got out of hand and spf-13 had to be gutted.  Also, I found my vim
+sessions could get a biiiitt   slloooooow.
+
+So in the words of the rogue marine to Nick Cage in "The Rock":
+  "I'll take pleasure in guttin' you boy!"
+
+It works well for me on my macs and linux, but I've
 stripped out the windows support (at least for now).  mod-vim achieves the same
 ends as spf-13 in that it installs a set of useful plugins and provides some
 organisational philosophy to the configuration.
