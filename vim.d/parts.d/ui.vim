@@ -15,7 +15,7 @@ endif
 set tabpagemax=15               " Only show 15 tabs
 set showmode                    " Display the current mode
 
-set cursorline                  " Highlight current line
+set nocursorline                " Don't highlight current line.  Too SLLOOOWW!!
 
 syntax on
 
