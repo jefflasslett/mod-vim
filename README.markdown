@@ -23,8 +23,9 @@ organisational philosophy to the configuration.
 Nothing fancy as yet.  Simply clone this project somewhere convenient and
 create symlinks:
 
-1. `ln -s ~/.vimrc path/to/mod-vim/vimrc`
-1. `ln -s ~/.vim.d path/to/mod-vim/vim.d`
+1. `ln -s path/to/mod-vim/vimrc ~/.vimrc`
+1. `ln -s path/to/mod-vim/vim.d ~/.vim.d`
+1. Install vundle.  See install details at [https://github.com/VundleVim/Vundle.vim]
 1. `vim +PluginInstall! +PluginClean +qall`
 
 # Design
