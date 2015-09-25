@@ -54,6 +54,12 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
 
+" ================ Rails  ================== {
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+
+" }
+
 call vundle#end()
 
 filetype plugin indent on
