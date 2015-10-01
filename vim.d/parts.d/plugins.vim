@@ -57,6 +57,7 @@ Plugin 'groenewege/vim-less'
 " ================ Rails  ================== {
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
+Plugin 'slim-template/vim-slim'
 
 " }
 
