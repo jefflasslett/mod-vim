@@ -5,10 +5,9 @@ if isdirectory(expand("~/.vim/bundle/nerdtree"))
   nmap <leader>nt :NERDTreeFind<CR>
 endif
 
-" unite key mappings
+" CtrlP key mappings
 " ============================================================================
-:nnoremap <C-b> :Unite -quick-match buffer<CR>
-:nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
+let g:ctrlp_map = '<C-p>'
 
 " neocomplete key mappings
 " ============================================================================
