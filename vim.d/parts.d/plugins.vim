@@ -58,7 +58,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'slim-template/vim-slim'
-
+Plugin 'kchmck/vim-coffee-script'
 " }
 
 call vundle#end()
