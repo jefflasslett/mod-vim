@@ -47,9 +47,11 @@ Plugin 'pbrisbin/html-template-syntax'    " Yesod templates
 
 Plugin 'bling/vim-airline'
 
-Plugin 'Shougo/neocomplete'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Valloric/YouCompleteMe'
+
+" Plugin 'Shougo/neocomplete'
+" Plugin 'Shougo/neosnippet'
+" Plugin 'Shougo/neosnippet-snippets'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'

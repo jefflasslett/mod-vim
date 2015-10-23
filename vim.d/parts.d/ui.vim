@@ -1,5 +1,7 @@
 colorscheme coding_goodness
 
+:let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
