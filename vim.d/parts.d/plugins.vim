@@ -1,5 +1,5 @@
 " The next three lines ensure that the plugin system works
-set nocompatible
+" set nocompatible " ignored by nvim
 
 filetype on  " Work-around for a possible problem on macs
 filetype off
