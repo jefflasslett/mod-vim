@@ -30,10 +30,62 @@ organisational philosophy to the configuration.
 Nothing fancy as yet.  Simply clone this project somewhere convenient and
 create symlinks:
 
+## vim
+
 1. `ln -s path/to/mod-vim/vimrc ~/.vimrc`
 1. `ln -s path/to/mod-vim/vim.d ~/.vim.d`
 1. Install vundle.  See install details at [https://github.com/VundleVim/Vundle.vim]
 1. `vim +PluginInstall! +PluginClean +qall`
+
+## neovim
+
+I'm now using [neovim](http://neovim.io) and, provided you install neovim's python support, this
+config and its plugins work.
+
+Neovim puts its rc file in a different place to vim.
+See [:help nvim-from-vim](https://neovim.io/doc/user/nvim_from_vim.html)
+Also [:help nvim-configuration](https://neovim.io/doc/user/nvim_configuration.html)
+
+The [XDG spec](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html)
+indicates that the default for `$XDG_CONFIG_HOME` is `$HOME/.config`.  neovim will look
+for its config at `$HOME/.config/nvim` if `$XDG_CONFIG_HOME` is not set.
+
+Assuming `$XDG_CONFIG_HOME` is set ...
+> Use `$XDG_CONFIG_HOME/nvim/init.vim` instead of `.vimrc` for storing configuration.
+
+Make `$XDG_CONFIG_HOME/nvim/init.vim` a symlink to `mod-vim`'s `vimrc` file:
+`> ln -s /path/to/mod-vim/vimrc $XDG_CONFIG_HOME/nvim/init.vim`
+
+Currently the config is setup to install plugins into `$HOME/.vim`.  This
+should be OK but if it isn't please let me know.  FWIW, as a former vim user, I
+followed the steps in [:help nvim-from-vim](https://neovim.io/doc/user/nvim_from_vim.html)
+
+
+### To setup neovim's python package
+
+From [:help nvim-python](https://neovim.io/doc/user/nvim_python.html#nvim-python)
+
+> To use Vim Python 2/3 plugins with Nvim, do the following:
+>
+> - For Python 2 plugins, make sure an interpreter for Python 2.6 or 2.7 is
+>   available in your `$PATH`, then install the `neovim` Python package systemwide:
+>
+>     $ sudo pip2 install neovim
+>
+>   or for the current user:
+>
+>     $ pip2 install --user neovim
+>
+> - For Python 3 plugins, make sure an interpreter for Python 3.3 or above is
+>   available in your `$PATH`, then install the `neovim` Python package systemwide:
+>
+>     $ sudo pip3 install neovim
+>
+>   or for the current user:
+>
+>     $ pip3 install --user neovim
+
+
 
 # Design
 
@@ -107,8 +159,8 @@ With that in mind here's what is installed:
   <dd>project tree view<dd>
   <dt>'Shougo/vimproc'</dt>
   <dd>prerequisite for Shuogo's other plugins<dd>
-  <dt>'Shougo/unite.vim'</dt>
-  <dd>universal finder and lister of files/buffers<dd>
+  <dt>'kien/ctrlp.vim'</dt>
+  <dd>fuzzy finder and lister of files/buffers<dd>
   <dt>'tpope/vim-fugitive'</dt>
   <dd>git wrapper<dd>
   <dt>'rking/ag.vim'</dt>
@@ -127,16 +179,20 @@ With that in mind here's what is installed:
   <dd>Yesod templates<dd>
   <dt>'bling/vim-airline'</dt>
   <dd>Enhanced status line<dd>
-  <dt>'Shougo/neocomplete'</dt>
-  <dd>autocomplete<dd>
-  <dt>'Shougo/neosnippet'</dt>
-  <dd>snippets.  Code fragments<dd>
-  <dt>'Shougo/neosnippet-snippets'</dt>
-  <dd>Some actual snippets for neosnippets to use</dd>
+  <dt>'Valloric/YouCompleteMe'</dt>
+  <dd>Code completion<dd>
   <dt>'mattn/emmet-vim'</dt>
   <dd>HTML editing <dd>
   <dt>'groenewege/vim-less'</dt>
   <dd>Syntax highlighting of Less CSS preprocessor syntax</dd>
+  <dt>'tpope/vim-rails'</dt>
+  <dd>Rails project navigation and helpers</dd>
+  <dt>'tpope/vim-bundler'</dt>
+  <dd>"Lightweight bag of goodies for bundler.  Works well with rails.vim</dd>
+  <dt>'slim-template/vim-slim'</dt>
+  <dd>Syntax highlighting for slim templates</dd>
+  <dt>'kchmck/vim-coffee-script'</dt>
+  <dd>Syntax highlighting for coffeescript files</dd>
 </dl>
 
 
@@ -152,8 +208,6 @@ There may also be custom key bindings to alter and other fragments of config
 to edit.  
 
 **More to come.**
-
-* Keyboard [cheat sheet](https://walking-without-crutches.heroku.com/image/images/vi-vim-cheat-sheet.png).
 
 [Git]:http://git-scm.com
 [Vim]:http://www.vim.org/download.php#pc
