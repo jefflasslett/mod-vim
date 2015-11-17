@@ -4,11 +4,12 @@
 filetype on  " Work-around for a possible problem on macs
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.config/nvim/plugins.d/Vundle.vim
+exe 'set rtp+=' . expand(g:mod_plugins_dir.'/Vundle.vim')
+call vundle#begin(g:mod_plugins_dir)
 
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'jefflasslett/coding_goodness'
 Plugin 'scrooloose/nerdtree'
 

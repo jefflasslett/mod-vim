@@ -1,5 +1,5 @@
 " Modeline and Notes {
-" vim: set sw=2 ts=2 sts=2 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
+" vim: set sw=2 ts=2 sts=2 et tw=78:
 "
 "   Mod(ular) vimrc
 "
@@ -70,10 +70,11 @@
   " Assume unix conventions to begin with.  This config won't work on windows
   " first up.
 
-  let g:mod_root_dir    = expand( '~/.vim.d' )
+  let g:vim_root_dir    = expand( '~/.config/nvim' )
+  let g:mod_root_dir    = g:vim_root_dir.'/mod-vim.d'
   let g:mod_parts_dir   = g:mod_root_dir.'/parts.d'
   let g:mod_helpers_dir = g:mod_root_dir.'/helpers.d'
-  let g:mod_plugins_dir = g:mod_root_dir.'/plugins.d'
+  let g:mod_plugins_dir = g:vim_root_dir.'/plugins.d'
   let g:mod_parts_dir   = g:mod_root_dir.'/parts.d'
   let g:mod_conf_dir    = g:mod_root_dir.'/conf.d'
   let g:mod_swap_dir    = g:mod_root_dir.'/swap.d'

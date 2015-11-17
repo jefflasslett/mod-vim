@@ -1,5 +1,5 @@
 
-if isdirectory(expand("~/.vim/bundle/nerdtree"))
+if isdirectory(expand(g:mod_plugins_dir . "/nerdtree"))
   map <C-e> :NERDTreeToggle<CR>
   map <leader>e :NERDTreeFind<CR>
   nmap <leader>nt :NERDTreeFind<CR>
