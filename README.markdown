@@ -44,6 +44,7 @@ config and its plugins work.
 
 Neovim puts its rc file in a different place to vim.
 See [:help nvim-from-vim](https://neovim.io/doc/user/nvim_from_vim.html)
+
 Also [:help nvim-configuration](https://neovim.io/doc/user/nvim_configuration.html)
 
 The [XDG spec](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html)
@@ -54,6 +55,7 @@ Assuming `$XDG_CONFIG_HOME` is set ...
 > Use `$XDG_CONFIG_HOME/nvim/init.vim` instead of `.vimrc` for storing configuration.
 
 Make `$XDG_CONFIG_HOME/nvim/init.vim` a symlink to `mod-vim`'s `vimrc` file:
+
 `> ln -s /path/to/mod-vim/vimrc $XDG_CONFIG_HOME/nvim/init.vim`
 
 Currently the config is setup to install plugins into `$HOME/.vim`.  This
