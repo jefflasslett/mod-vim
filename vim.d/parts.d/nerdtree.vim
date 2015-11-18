@@ -1,8 +1,8 @@
-if isdirectory(expand("~/.vim/bundle/nerdtree"))
+if isdirectory(expand(g:mod_plugins_dir . "/nerdtree"))
   let g:NERDShutUp=1
 endif
 
-if isdirectory(expand("~/.vim/bundle/nerdtree"))
+if isdirectory(expand(g:mod_plugins_dir . "/nerdtree"))
   let NERDTreeShowBookmarks=1
   let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
   let NERDTreeChDirMode=0
