@@ -3,7 +3,7 @@
 "
 "   Mod(ular) vimrc
 "
-"   This is the personal .vimrc of Jeff Lasslett.
+"   This is the personal .vimrc/init.vim of Jeff Lasslett.
 "
 "   It started out as spf-13 (Steve Francia's) vimrc.  But things got out of
 "   hand and spf-13 had to be gutted.  Also, I found my vim sessions could get
@@ -38,16 +38,21 @@
 " Create variables to hold the names of important directories in this
 " modular config tree:
 "
-" $HOME (aka ~)
+" g:vim_root_dir      <- $HOME for vim, $HOME/.config/nvim for neovim.
+" |                       See variable definitions below.
 " |
-" +-- .vimrc          <- this file. It all starts here
+" |-- init.vim        <- If using neovim init.vim will be a symlink to
+" |                      this file (mod-vim/vimrc)
 " |
-" +-- .vim            <- default install location for vundle plugins
-" |   |
-" |   +-- bundle      <- vim plugins installed below this dir
+" +-- .vimrc          <- If using vim .vimrc will usually be a symlink to this
+" |                      file (mod-vim/vimrc).
 " |
-" +-- .vim.d          <- The root of our vim config
-" |   |
+" +-- g:mod_root_dir  <- The root of our vim config.
+" |   |                  For vim: this can be $HOME/.vim.d/ which can be a 
+" |   |                  symlink to mod-vim/vim.d/.
+" |   |                  For neovim: $HOME/.config/nvim/mod-vim.d/ which can
+" |   |                  also be a symlink to mod-vim/vim.d/.
+""|   |
 " |   +-- conf.d      <- contains symlinks to 'parts'.  These parts form the
 " |   |                  active configuration.
 " |   |
@@ -66,15 +71,32 @@
 " |   +-- undo.d         <- undo file directory
 " |   |
 " |   +-- backup.d       <- backup file directory
+" |
+" +-- g:mod-plugins-dir <- Plugins installed below here.
+" |   |                    For vim: $HOME/.vim/bundle/ typically.
+" |   |                    for neovim: $HOME/.config/nvim/plugins.d/
+" |   |
+" |   +-- <plugins>
+"
+" Assume unix conventions to begin with.  This config won't work on windows
+" first up.
 
-  " Assume unix conventions to begin with.  This config won't work on windows
-  " first up.
-
+  " For neovim: set to $HOME/.config/nvim or $XDG_CONFIG_HOME/nvim (default)
+  " For vim: set to $HOME
   let g:vim_root_dir    = expand( '~/.config/nvim' )
+
+  " For neovim: set to $HOME/.config/nvim/mod-vim.d or
+  "             $XDG_CONFIG_HOME/nvim/mod-vim.d (default)
+  " For vim: set to $HOME/.vim.d/
   let g:mod_root_dir    = g:vim_root_dir.'/mod-vim.d'
+
+  " For neovim: set to $HOME/.config/nvim/plugins.d or
+  "             $XDG_CONFIG_HOME/nvim/plugins.d (default)
+  " For vim: set to $HOME/.vim/plugins.d
+  let g:mod_plugins_dir = g:vim_root_dir.'/plugins.d'
+
   let g:mod_parts_dir   = g:mod_root_dir.'/parts.d'
   let g:mod_helpers_dir = g:mod_root_dir.'/helpers.d'
-  let g:mod_plugins_dir = g:vim_root_dir.'/plugins.d'
   let g:mod_parts_dir   = g:mod_root_dir.'/parts.d'
   let g:mod_conf_dir    = g:mod_root_dir.'/conf.d'
   let g:mod_swap_dir    = g:mod_root_dir.'/swap.d'

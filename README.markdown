@@ -32,10 +32,16 @@ create symlinks:
 
 ## vim
 
+1. Edit `path/to/mod-vim/vimrc` setting `g:vim_root_dir` to `$HOME`
+1. Edit `path/to/mod-vim/vimrc` setting `g:mod_root_dir` to `$HOME/.vim.d`
+1. Edit `path/to/mod-vim/vimrc` setting `g:mod_plugins_dir` to `$HOME/.vim/plugins.d`
 1. `ln -s path/to/mod-vim/vimrc ~/.vimrc`
 1. `ln -s path/to/mod-vim/vim.d ~/.vim.d`
+1. `mkdir -p ~/.vim/plugins.d/`
 1. Install vundle.  See install details at [https://github.com/VundleVim/Vundle.vim]
-1. `vim +PluginInstall! +PluginClean +qall`
+  1.   `cd ~/.vim/plugins.d`
+  1.   `git clone git@github.com:VundleVim/Vundle.vim.git`
+1. `vim +PluginInstall! +qall`
 
 ## neovim
 
@@ -44,26 +50,27 @@ config and its plugins work.
 
 Neovim puts its rc file in a different place to vim.
 See [:help nvim-from-vim](https://neovim.io/doc/user/nvim_from_vim.html)
-
-Also [:help nvim-configuration](https://neovim.io/doc/user/nvim_configuration.html)
+and also [:help nvim-configuration](https://neovim.io/doc/user/nvim_configuration.html)
 
 The [XDG spec](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 indicates that the default for `$XDG_CONFIG_HOME` is `$HOME/.config`.  neovim will look
 for its config at `$HOME/.config/nvim` if `$XDG_CONFIG_HOME` is not set.
 
-Assuming `$XDG_CONFIG_HOME` is set ...
-> Use `$XDG_CONFIG_HOME/nvim/init.vim` instead of `.vimrc` for storing configuration.
+**Setup**
 
-Make `$XDG_CONFIG_HOME/nvim/init.vim` a symlink to `mod-vim`'s `vimrc` file:
-
-`> ln -s /path/to/mod-vim/vimrc $XDG_CONFIG_HOME/nvim/init.vim`
-
-Currently the config is setup to install plugins into `$HOME/.vim`.  This
-should be OK but if it isn't please let me know.  FWIW, as a former vim user, I
-followed the steps in [:help nvim-from-vim](https://neovim.io/doc/user/nvim_from_vim.html)
+1. `mkdir -p $XDG_CONFIG_HOME/nvim/plugins.d`
+1. `cd $XDG_CONFIG_HOME/nvim/plugins.d`
+1. `git clone git@github.com:VundleVim/Vundle.vim.git`
+1. `cd ..`
+1. `ln -s path/to/mod-vim/vim.d mod-vim.d`
+1. `ln -s path/to/mod-vim/vimrc init.vim`
+1. `nvim +PluginInstall +qall`
 
 
 ### To setup neovim's python package
+
+This is needed for YouCompleteMe and any other python based plugins you may
+want to use.
 
 From [:help nvim-python](https://neovim.io/doc/user/nvim_python.html#nvim-python)
 
@@ -88,20 +95,24 @@ From [:help nvim-python](https://neovim.io/doc/user/nvim_python.html#nvim-python
 >     $ pip3 install --user neovim
 
 
-
 # Design
 
 
 ```
- $HOME (aka ~)
+ g:vim_root_dir      <- $HOME for vim, $HOME/.config/nvim for neovim.
+ |                       See variable definitions below.
  |
- +-- .vimrc          <- this file. It all starts here
+ |-- init.vim        <- If using neovim init.vim will be a symlink to
+ |                      this file (mod-vim/vimrc)
  |
- +-- .vim            <- default install location for vundle plugins
- |   |
- |   +-- bundle      <- vim plugins installed below this dir
+ +-- .vimrc          <- If using vim .vimrc will usually be a symlink to this
+ |                      file (mod-vim/vimrc).
  |
- +-- .vim.d          <- The root of our vim config
+ +-- g:mod_root_dir  <- The root of our vim config.
+ |   |                  For vim: this can be $HOME/.vim.d/ which can be a 
+ |   |                  symlink to mod-vim/vim.d/.
+ |   |                  For neovim: $HOME/.config/nvim/mod-vim.d/ which can
+ |   |                  also be a symlink to mod-vim/vim.d/.
  |   |
  |   +-- conf.d      <- contains symlinks to 'parts'.  These parts form the
  |   |                  active configuration.
@@ -109,26 +120,29 @@ From [:help nvim-python](https://neovim.io/doc/user/nvim_python.html#nvim-python
  |   +-- parts.d     <- 'parts' fragments of vim config to be sourced by
  |   |   |              .vimrc
  |   |   |
- |   |   +-- plugins.vim <- Plugins are listed in here
- |   |   |
- |   |   +-- keymap.vim  <- Key bindings can be customised in here.
- |   |   |
- |   |   +-- <*>         <- other vim config fragments to be included
+ |   |   +-- <*>        <- other vim config fragments to be included
  |   |
- |   +-- helpers.d       <- fragments of viml with functions to assist the
- |   |                      loading of the config
+ |   +-- helpers.d      <- fragments of viml with functions to assist the
+ |   |                     loading of the config
  |   |
- |   +-- swap.d          <- swap file directory
+ |   +-- swap.d         <- swap file directory
  |   |
- |   +-- view.d          <- view file directory
+ |   +-- view.d         <- view file directory
  |   |
- |   +-- undo.d          <- undo file directory
+ |   +-- undo.d         <- undo file directory
  |   |
- |   +-- backup.d        <- backup file directory
+ |   +-- backup.d       <- backup file directory
+ |
+ +-- g:mod-plugins-dir <- Plugins installed below here.
+ |   |                    For vim: $HOME/.vim/bundle/ typically.
+ |   |                    for neovim: $HOME/.config/nvim/plugins.d/
+ |   |
+ |   +-- <plugins>
+
 
 ```
 
-`.vimrc` doesn't contain much.  It defines a few symbols to refer to the 
+`.vimrc`/`init.vim` doesn't contain much.  It defines a few symbols to refer to the 
 directories in `.vim.d/`, and it calls a helper function, defined in `helpers.d`,
 to load the config fragments (parts) linked to from `conf.d`.
 
@@ -153,7 +167,7 @@ time, set its key bindings, and learn how to make effective use of it.
 With that in mind here's what is installed:
 
 <dl>
-  <dt>'gmarik/Vundle.vim'</dt>
+  <dt>'Vundlevim/Vundle.vim'</dt>
   <dd>the plugin manager</dd>
   <dt>'jefflasslett/coding_goodness'</dt>
   <dd>my own syntax highlighting<dd>
@@ -207,11 +221,12 @@ Just edit the list in `vim.d/parts.d/plugins.vim` and run:
 ```
 
 There may also be custom key bindings to alter and other fragments of config
-to edit.  
+to edit.
 
 **More to come.**
 
 [Git]:http://git-scm.com
 [Vim]:http://www.vim.org/download.php#pc
+[Neovim]:https://neovim.io
 [spf13-vim]:https://github.com/spf13/spf13-vim
 
