@@ -8,16 +8,10 @@ let g:haddock_browser_callformat = "%s %s"
 
 " let hscoptions="EMtBQZ"
 
-let mapleader=","
-let g:mapleader=","
-set tm=2000
-nmap <silent> <leader>ht :GhcModType<CR>
-nmap <silent> <leader>hh :GhcModTypeClear<CR>
-nmap <silent> <leader>hT :GhcModTypeInsert<CR>
-nmap <silent> <leader>hc :SyntasticCheck ghc_mod<CR>:lopen<CR>
 let g:syntastic_mode_map={'mode': 'active', 'passive_filetypes': ['haskell']}
 let g:syntastic_always_populate_loc_list = 1
-nmap <silent> <leader>hl :SyntasticCheck hlint<CR>:lopen<CR>
+
+set tm=2000
 
 " Auto-checking on writing
 autocmd BufWritePost *.hs,*.lhs GhcModCheckAndLintAsync
