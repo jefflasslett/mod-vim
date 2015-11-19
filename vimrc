@@ -12,13 +12,11 @@
 "   So in the words of the rogue marine to Nick Cage in "The Rock":
 "     "I'll take pleasure in guttin' you boy!"
 "
-"   Below is preserved all of the original licence (which I'm happy to retain)
-"   copyright notice, and the link to the spf-13 homepage.
-"   ========================================================================
-"
 "   You can find the original spf-13 at http://spf13.com
 "
-"   Copyright 2014 Steve Francia
+"   ========================================================================
+"
+"   Copyright 2015 Jeff Lasslett
 "
 "   Licensed under the Apache License, Version 2.0 (the "License");
 "   you may not use this file except in compliance with the License.
@@ -62,7 +60,11 @@
 " |   |   +-- <*>        <- other vim config fragments to be included
 " |   |
 " |   +-- helpers.d      <- fragments of viml with functions to assist the
-" |   |                     loading of the config
+" |                         loading of the config
+" |
+" +-- g:mod_data_dir     <- Parent dir for files (n)vim creates while editing.
+" |   |                     May not actually be under g:vim_root_dir.  nvim
+" |   |                     places it under ~/.local/share/nvim/
 " |   |
 " |   +-- swap.d         <- swap file directory
 " |   |
@@ -83,7 +85,11 @@
 
   " For neovim: set to $HOME/.config/nvim or $XDG_CONFIG_HOME/nvim (default)
   " For vim: set to $HOME
-  let g:vim_root_dir    = expand( '~/.config/nvim' )
+  let g:vim_root_dir = expand( '~/.config/nvim' )
+
+  " For neovim: set to $HOME/.local/share/nvim (default)
+  " For vim: set to $HOME/.vim.d or perhaps $HOME/.vim or some other spot
+  let g:mod_data_dir = expand( '~/.local/share/nvim' )
 
   " For neovim: set to $HOME/.config/nvim/mod-vim.d or
   "             $XDG_CONFIG_HOME/nvim/mod-vim.d (default)
@@ -97,12 +103,12 @@
 
   let g:mod_parts_dir   = g:mod_root_dir.'/parts.d'
   let g:mod_helpers_dir = g:mod_root_dir.'/helpers.d'
-  let g:mod_parts_dir   = g:mod_root_dir.'/parts.d'
   let g:mod_conf_dir    = g:mod_root_dir.'/conf.d'
-  let g:mod_swap_dir    = g:mod_root_dir.'/swap.d'
-  let g:mod_views_dir   = g:mod_root_dir.'/views.d'
-  let g:mod_undo_dir    = g:mod_root_dir.'/undo.d'
-  let g:mod_backup_dir  = g:mod_root_dir.'/backup.d'
+
+  let g:mod_swap_dir    = g:mod_data_dir.'/swap.d'
+  let g:mod_views_dir   = g:mod_data_dir.'/views.d'
+  let g:mod_undo_dir    = g:mod_data_dir.'/undo.d'
+  let g:mod_backup_dir  = g:mod_data_dir.'/backup.d'
 
   " Check that the root dir exists, otherwise none of this can work.
   if !isdirectory(g:mod_root_dir)
