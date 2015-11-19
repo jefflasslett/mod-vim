@@ -35,6 +35,7 @@ create symlinks:
 1. Edit `path/to/mod-vim/vimrc` setting `g:vim_root_dir` to `$HOME`
 1. Edit `path/to/mod-vim/vimrc` setting `g:mod_root_dir` to `$HOME/.vim.d`
 1. Edit `path/to/mod-vim/vimrc` setting `g:mod_plugins_dir` to `$HOME/.vim/plugins.d`
+1. Edit `path/to/mod-vim/vimrc` setting `g:mod_data_dir` to `$HOME/.vim`
 1. `ln -s path/to/mod-vim/vimrc ~/.vimrc`
 1. `ln -s path/to/mod-vim/vim.d ~/.vim.d`
 1. `mkdir -p ~/.vim/plugins.d/`
@@ -133,6 +134,18 @@ From [:help nvim-python](https://neovim.io/doc/user/nvim_python.html#nvim-python
  |   |
  |   +-- backup.d       <- backup file directory
  |
+ +-- g:mod_data_dir     <- Parent dir for files (n)vim creates while editing.
+ |   |                     May not actually be under g:vim_root_dir.  nvim
+ |   |                     places it under ~/.local/share/nvim/
+ |   |
+ |   +-- swap.d         <- swap file directory
+ |   |
+ |   +-- view.d         <- view file directory
+ |   |
+ |   +-- undo.d         <- undo file directory
+ |   |
+ |   +-- backup.d       <- backup file directory
+ |
  +-- g:mod-plugins-dir <- Plugins installed below here.
  |   |                    For vim: $HOME/.vim/bundle/ typically.
  |   |                    for neovim: $HOME/.config/nvim/plugins.d/
@@ -167,7 +180,7 @@ time, set its key bindings, and learn how to make effective use of it.
 With that in mind here's what is installed:
 
 <dl>
-  <dt>'Vundlevim/Vundle.vim'</dt>
+  <dt>'VundleVim/Vundle.vim'</dt>
   <dd>the plugin manager</dd>
   <dt>'jefflasslett/coding_goodness'</dt>
   <dd>my own syntax highlighting<dd>
