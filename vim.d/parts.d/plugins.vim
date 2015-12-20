@@ -58,6 +58,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
 
 " ================ Rails  ================== {
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'slim-template/vim-slim'
