@@ -188,7 +188,7 @@ With that in mind here's what is installed:
   <dd>project tree view<dd>
   <dt>'Shougo/vimproc'</dt>
   <dd>prerequisite for Shuogo's other plugins<dd>
-  <dt>'kien/ctrlp.vim'</dt>
+  <dt>'ctrlpvim/ctrlp.vim'</dt>
   <dd>fuzzy finder and lister of files/buffers<dd>
   <dt>'tpope/vim-fugitive'</dt>
   <dd>git wrapper<dd>

@@ -14,7 +14,7 @@ Plugin 'jefflasslett/coding_goodness'
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'Shougo/vimproc'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'tpope/vim-fugitive'
 
