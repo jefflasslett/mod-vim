@@ -65,6 +65,12 @@ Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
 " }
 
+" ================ Purescript  ================== {
+Plugin 'raichoo/purescript-vim'
+" }
+
+" }
+
 call vundle#end()
 
 filetype plugin indent on
