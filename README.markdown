@@ -182,7 +182,7 @@ With that in mind here's what is installed:
 <dl>
   <dt>'VundleVim/Vundle.vim'</dt>
   <dd>the plugin manager</dd>
-  <dt>'jefflasslett/coding_goodness'</dt>
+  <dt>'jefflasslett/positive-reinforcement'</dt>
   <dd>my own syntax highlighting<dd>
   <dt>'scrooloose/nerdtree'</dt>
   <dd>project tree view<dd>
