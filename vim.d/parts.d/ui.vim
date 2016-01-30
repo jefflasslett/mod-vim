@@ -1,4 +1,4 @@
-colorscheme coding_goodness
+colorscheme positive-reinforcement
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 

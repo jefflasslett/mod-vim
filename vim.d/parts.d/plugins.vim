@@ -10,7 +10,7 @@ call vundle#begin(g:mod_plugins_dir)
 
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'jefflasslett/coding_goodness'
+Plugin 'jefflasslett/positive-reinforcement'
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'Shougo/vimproc'
